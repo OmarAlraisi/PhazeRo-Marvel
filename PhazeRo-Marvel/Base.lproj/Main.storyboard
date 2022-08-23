@@ -28,12 +28,12 @@
         <scene sceneID="S5f-vX-T81">
             <objects>
                 <tableViewController id="Kcm-zY-LIn" customClass="HomeTableViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mAk-QD-Tdt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="197" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mAk-QD-Tdt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="197" id="I4Z-vd-zfb">
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharacterCell" rowHeight="197" id="I4Z-vd-zfb">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4Z-vd-zfb" id="cEf-iT-4cd">
@@ -64,15 +64,8 @@
                                                     </constraints>
                                                     <color key="tintColor" red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="WIKI">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="63" name="DINAlternate-Bold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <buttonConfiguration key="configuration" style="plain" title="WIKI">
+                                                        <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="63"/>
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: 10011001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHN-pd-d15">
@@ -100,7 +93,10 @@
                                         <constraint firstItem="zT0-KS-QTM" firstAttribute="top" secondItem="cEf-iT-4cd" secondAttribute="top" constant="10" id="oxq-Ph-bER"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="KUH-gW-7y9" kind="push" id="OKD-n8-OxZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -125,40 +121,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name Char " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thb-v7-2TL">
-                                <rect key="frame" x="15" y="59.000000000000007" width="360" height="25.333333333333336"/>
+                                <rect key="frame" x="15" y="103" width="360" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard_large" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-sn-n8x">
-                                <rect key="frame" x="70" y="109.33333333333331" width="250" height="250"/>
+                                <rect key="frame" x="70" y="153.33333333333337" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bDW-rX-nEr"/>
                                     <constraint firstAttribute="height" constant="250" id="ijU-aO-1di"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uiR-3V-Jk3">
-                                <rect key="frame" x="15" y="384.33333333333326" width="360" height="459.66666666666674"/>
+                                <rect key="frame" x="15" y="428.33333333333326" width="360" height="415.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="aG9-lN-W9q">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="360" height="57.333332061767578"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComicCell" id="aG9-lN-W9q">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="360" height="62.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aG9-lN-W9q" id="PtZ-fs-9jv">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="57.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="62.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQa-2p-zj1">
-                                                    <rect key="frame" x="0.0" y="2.6666666666666679" width="360" height="52.333333333333329"/>
+                                                    <rect key="frame" x="5" y="5" width="350" height="52.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comic NameComic NameComic NameComic NameComic NameComic NameComic NameComic NameComic Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNb-d2-Ych">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="52.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="52.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQq-RE-ksY">
-                                                            <rect key="frame" x="240" y="0.0" width="120" height="52.333333333333336"/>
+                                                            <rect key="frame" x="230" y="0.0" width="120" height="52.333333333333336"/>
                                                             <color key="backgroundColor" red="0.92722529170000001" green="0.1144637391" blue="0.14184397460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="120" id="Ffd-ik-i5l"/>
@@ -166,25 +162,18 @@
                                                             </constraints>
                                                             <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain">
-                                                                <attributedString key="attributedTitle">
-                                                                    <fragment content="WIKI">
-                                                                        <attributes>
-                                                                            <font key="NSFont" size="48" name="DINAlternate-Bold"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                        </attributes>
-                                                                    </fragment>
-                                                                </attributedString>
+                                                            <buttonConfiguration key="configuration" style="plain" title="WIKI">
+                                                                <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="48"/>
                                                             </buttonConfiguration>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WQa-2p-zj1" secondAttribute="trailing" id="Gy4-Si-SiF"/>
-                                                <constraint firstItem="WQa-2p-zj1" firstAttribute="leading" secondItem="PtZ-fs-9jv" secondAttribute="leading" id="ZaH-J5-h4p"/>
-                                                <constraint firstAttribute="bottom" secondItem="WQa-2p-zj1" secondAttribute="bottom" constant="2.5" id="eYR-VS-j7t"/>
-                                                <constraint firstItem="WQa-2p-zj1" firstAttribute="top" secondItem="PtZ-fs-9jv" secondAttribute="top" constant="2.5" id="pEd-s0-PZ2"/>
+                                                <constraint firstItem="WQa-2p-zj1" firstAttribute="top" secondItem="PtZ-fs-9jv" secondAttribute="top" constant="5" id="5wY-1P-8b2"/>
+                                                <constraint firstAttribute="trailing" secondItem="WQa-2p-zj1" secondAttribute="trailing" constant="5" id="dvb-fU-1HG"/>
+                                                <constraint firstItem="WQa-2p-zj1" firstAttribute="leading" secondItem="PtZ-fs-9jv" secondAttribute="leading" constant="5" id="sMc-cA-Ima"/>
+                                                <constraint firstAttribute="bottom" secondItem="WQa-2p-zj1" secondAttribute="bottom" constant="5" id="ydT-We-kTS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -207,6 +196,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AMC-hA-Oi7"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="LCL-sn-n8x" id="Vhb-q3-Hur"/>
+                        <outlet property="characterNameLabel" destination="Thb-v7-2TL" id="4WT-Ti-82G"/>
+                        <outlet property="comicsTableView" destination="uiR-3V-Jk3" id="otK-ix-3Pk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unj-Mn-nQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
