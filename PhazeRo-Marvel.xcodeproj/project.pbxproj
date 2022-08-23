@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		07DBE34328B3D63A00E7F760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBE34228B3D63A00E7F760 /* AppDelegate.swift */; };
 		07DBE34528B3D63A00E7F760 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBE34428B3D63A00E7F760 /* SceneDelegate.swift */; };
-		07DBE34728B3D63A00E7F760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBE34628B3D63A00E7F760 /* ViewController.swift */; };
 		07DBE34A28B3D63A00E7F760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DBE34828B3D63A00E7F760 /* Main.storyboard */; };
 		07DBE34C28B3D63D00E7F760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07DBE34B28B3D63D00E7F760 /* Assets.xcassets */; };
 		07DBE34F28B3D63D00E7F760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DBE34D28B3D63D00E7F760 /* LaunchScreen.storyboard */; };
+		07DBE35728B3EDAC00E7F760 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBE35628B3EDAC00E7F760 /* HomeTableViewController.swift */; };
+		07DBE35A28B3F43F00E7F760 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DBE35928B3F43F00E7F760 /* CharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07DBE33F28B3D63A00E7F760 /* PhazeRo-Marvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PhazeRo-Marvel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07DBE34228B3D63A00E7F760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07DBE34428B3D63A00E7F760 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		07DBE34628B3D63A00E7F760 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07DBE34928B3D63A00E7F760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07DBE34B28B3D63D00E7F760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07DBE34E28B3D63D00E7F760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07DBE35028B3D63D00E7F760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07DBE35628B3EDAC00E7F760 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		07DBE35928B3F43F00E7F760 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07DA9AF928B3FD14007FE065 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07DBE35628B3EDAC00E7F760 /* HomeTableViewController.swift */,
+				07DBE35928B3F43F00E7F760 /* CharacterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		07DA9AFA28B3FD9B007FE065 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		07DBE33628B3D63900E7F760 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +74,10 @@
 		07DBE34128B3D63A00E7F760 /* PhazeRo-Marvel */ = {
 			isa = PBXGroup;
 			children = (
+				07DA9AFA28B3FD9B007FE065 /* Models */,
+				07DA9AF928B3FD14007FE065 /* Controllers */,
 				07DBE34228B3D63A00E7F760 /* AppDelegate.swift */,
 				07DBE34428B3D63A00E7F760 /* SceneDelegate.swift */,
-				07DBE34628B3D63A00E7F760 /* ViewController.swift */,
 				07DBE34828B3D63A00E7F760 /* Main.storyboard */,
 				07DBE34B28B3D63D00E7F760 /* Assets.xcassets */,
 				07DBE34D28B3D63D00E7F760 /* LaunchScreen.storyboard */,
@@ -138,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07DBE34728B3D63A00E7F760 /* ViewController.swift in Sources */,
+				07DBE35A28B3F43F00E7F760 /* CharacterViewController.swift in Sources */,
 				07DBE34328B3D63A00E7F760 /* AppDelegate.swift in Sources */,
 				07DBE34528B3D63A00E7F760 /* SceneDelegate.swift in Sources */,
+				07DBE35728B3EDAC00E7F760 /* HomeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +310,11 @@
 				DEVELOPMENT_TEAM = D2G5ZK629A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PhazeRo-Marvel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MarvelRo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,9 +340,11 @@
 				DEVELOPMENT_TEAM = D2G5ZK629A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PhazeRo-Marvel/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MarvelRo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
