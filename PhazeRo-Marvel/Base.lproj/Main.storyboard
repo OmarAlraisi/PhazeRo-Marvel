@@ -27,20 +27,20 @@
         <!--MarvelRo-->
         <scene sceneID="S5f-vX-T81">
             <objects>
-                <tableViewController id="Kcm-zY-LIn" customClass="HomeTableViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kcm-zY-LIn" customClass="CharactersTableViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="197" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="mAk-QD-Tdt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharacterCell" rowHeight="197" id="I4Z-vd-zfb">
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CharacterCell" rowHeight="197" id="I4Z-vd-zfb" customClass="CharacterTableViewCell" customModule="PhazeRo_Marvel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="197"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4Z-vd-zfb" id="cEf-iT-4cd">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard_large" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-Tq-cv2">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard_fantastic" translatesAutoresizingMaskIntoConstraints="NO" id="0PA-Tq-cv2">
                                             <rect key="frame" x="5" y="5" width="187.66666666666666" height="187.66666666666666"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="187.5" id="tMH-Ju-m0u"/>
@@ -67,6 +67,10 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="WIKI">
                                                         <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="63"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="characterDetailsClicked:" destination="I4Z-vd-zfb" eventType="touchUpInside" id="ufF-9R-dgP"/>
+                                                        <segue destination="1Qw-y6-1Ik" kind="showDetail" identifier="webSegue" id="a7s-OC-3wR"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: 10011001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHN-pd-d15">
                                                     <rect key="frame" x="0.0" y="147" width="187.33333333333334" height="35"/>
@@ -95,6 +99,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="characterIDLabel" destination="YHN-pd-d15" id="OKs-vs-gS6"/>
+                                    <outlet property="characterImageView" destination="0PA-Tq-cv2" id="haS-jg-Al0"/>
+                                    <outlet property="characterNameLabel" destination="Z6g-lU-haZ" id="aId-cE-ID7"/>
+                                    <outlet property="wikiButtonView" destination="ZW2-7Z-DT0" id="AEk-zf-NRi"/>
                                     <segue destination="KUH-gW-7y9" kind="push" id="OKD-n8-OxZ"/>
                                 </connections>
                             </tableViewCell>
@@ -112,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="163" y="99"/>
         </scene>
-        <!--Character View Controller-->
+        <!--Comics View Controller-->
         <scene sceneID="8Od-JW-aDW">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="KUH-gW-7y9" customClass="CharacterViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KUH-gW-7y9" customClass="ComicsViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QFO-Lz-yam">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +134,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard_large" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-sn-n8x">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standard_fantastic" translatesAutoresizingMaskIntoConstraints="NO" id="LCL-sn-n8x">
                                 <rect key="frame" x="70" y="153.33333333333337" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bDW-rX-nEr"/>
@@ -137,7 +145,7 @@
                                 <rect key="frame" x="15" y="428.33333333333326" width="360" height="415.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComicCell" id="aG9-lN-W9q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComicCell" id="aG9-lN-W9q" customClass="ComicTableViewCell" customModule="PhazeRo_Marvel" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="360" height="62.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aG9-lN-W9q" id="PtZ-fs-9jv">
@@ -157,16 +165,22 @@
                                                             <rect key="frame" x="230" y="0.0" width="120" height="52.333333333333336"/>
                                                             <color key="backgroundColor" red="0.92722529170000001" green="0.1144637391" blue="0.14184397460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="120" id="Ffd-ik-i5l"/>
                                                                 <constraint firstAttribute="height" constant="52" id="TFD-IZ-xLm"/>
                                                             </constraints>
-                                                            <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                            <color key="tintColor" red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="WIKI">
-                                                                <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="48"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="MORE">
+                                                                <fontDescription key="titleFontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="37"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="moreDetailsClicked:" destination="aG9-lN-W9q" eventType="touchUpInside" id="GCS-ZB-vXM"/>
+                                                                <segue destination="1Qw-y6-1Ik" kind="showDetail" id="LLR-sD-FaE"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="WQq-RE-ksY" firstAttribute="leading" secondItem="WQa-2p-zj1" secondAttribute="leading" constant="230" id="JuP-NQ-FBY"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -176,6 +190,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="WQa-2p-zj1" secondAttribute="bottom" constant="5" id="ydT-We-kTS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="comicTitleLabel" destination="PNb-d2-Ych" id="Udh-Dl-YTP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -206,12 +223,47 @@
             </objects>
             <point key="canvasLocation" x="1130.7692307692307" y="115.87677725118483"/>
         </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="Wo6-7x-bTr">
+            <objects>
+                <viewController id="1Qw-y6-1Ik" customClass="WebViewViewController" customModule="PhazeRo_Marvel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rry-Kp-hGN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSx-9W-wlB">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F9V-al-ht7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NSx-9W-wlB" firstAttribute="top" secondItem="rry-Kp-hGN" secondAttribute="top" id="WS5-WV-b9c"/>
+                            <constraint firstItem="F9V-al-ht7" firstAttribute="trailing" secondItem="NSx-9W-wlB" secondAttribute="trailing" id="ncg-9E-GZa"/>
+                            <constraint firstAttribute="bottom" secondItem="NSx-9W-wlB" secondAttribute="bottom" id="plg-j3-9hx"/>
+                            <constraint firstItem="NSx-9W-wlB" firstAttribute="leading" secondItem="F9V-al-ht7" secondAttribute="leading" id="ppY-Ck-A1j"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BDL-lj-Dgj"/>
+                    <connections>
+                        <outlet property="webView" destination="NSx-9W-wlB" id="aPo-8d-hzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6O-2k-i9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="802"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LLR-sD-FaE"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="standard_large" width="250" height="250"/>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="standard_fantastic" width="250" height="250"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
